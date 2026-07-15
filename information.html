@@ -649,7 +649,7 @@ ul { list-style: none; }
         <div class="card" style="padding: 0 24px;">
           <div class="detail-tabs">
             <div class="tabs-bar">
-              <div class="tab-item active" onclick="switchDetailTab(this, 'basic')">基本信息</div>
+              <div class="tab-item active" onclick="switchDetailTab(this, 'basic')">住户信息</div>
               <div class="tab-item" onclick="switchDetailTab(this, 'healthRecord')">健康数据记录</div>
             </div>
           </div>
@@ -796,9 +796,9 @@ let residents = [
     chronic: '无', allergy: '无', diet: '清淡饮食', selfCare: '完全自理',
     phone: '13800001001', emergencyContact: '张先生', emergencyPhone: '13900001001',
     healthRecords: [
-      { time: '2026-04-26 08:00', heartRate: '72', bloodPressure: '130/85', bloodSugar: '5.8', oxygen: '98', recorder: '护工小李', remark: '晨起测量，状态良好' },
-      { time: '2026-04-25 08:00', heartRate: '75', bloodPressure: '135/88', bloodSugar: '6.0', oxygen: '97', recorder: '护工小李', remark: '正常' },
-      { time: '2026-04-24 08:00', heartRate: '70', bloodPressure: '128/82', bloodSugar: '5.5', oxygen: '98', recorder: '护工小王', remark: '正常' }
+      { time: '2026-04-26 08:00', temperature: '36.5', bloodPressure: '130/85', heartRate: '72', respiration: '18', oxygen: '98', bloodSugar: '5.8', consciousness: '清醒', edema: '无', intake: '正常', excretion: '正常', pain: '无', sleep: '良好', recorder: '护工小李', remark: '晨起测量，状态良好' },
+      { time: '2026-04-25 08:00', temperature: '36.4', bloodPressure: '135/88', heartRate: '75', respiration: '19', oxygen: '97', bloodSugar: '6.0', consciousness: '清醒', edema: '无', intake: '正常', excretion: '正常', pain: '无', sleep: '良好', recorder: '护工小李', remark: '正常' },
+      { time: '2026-04-24 08:00', temperature: '36.3', bloodPressure: '128/82', heartRate: '70', respiration: '18', oxygen: '98', bloodSugar: '5.5', consciousness: '清醒', edema: '无', intake: '正常', excretion: '正常', pain: '无', sleep: '一般', recorder: '护工小王', remark: '正常' }
     ]
   },
   {
@@ -808,8 +808,8 @@ let residents = [
     chronic: '高血压', allergy: '青霉素过敏', diet: '低盐饮食', selfCare: '需协助',
     phone: '13800001002', emergencyContact: '李女士', emergencyPhone: '13900001002',
     healthRecords: [
-      { time: '2026-04-26 09:00', heartRate: '78', bloodPressure: '125/80', bloodSugar: '5.2', oxygen: '99', recorder: '护工小张', remark: '正常' },
-      { time: '2026-04-25 09:00', heartRate: '76', bloodPressure: '120/78', bloodSugar: '5.0', oxygen: '98', recorder: '护工小张', remark: '正常' }
+      { time: '2026-04-26 09:00', temperature: '36.6', bloodPressure: '125/80', heartRate: '78', respiration: '18', oxygen: '99', bloodSugar: '5.2', consciousness: '清醒', edema: '轻度', intake: '少量', excretion: '正常', pain: '无', sleep: '一般', recorder: '护工小张', remark: '正常' },
+      { time: '2026-04-25 09:00', temperature: '36.5', bloodPressure: '120/78', heartRate: '76', respiration: '17', oxygen: '98', bloodSugar: '5.0', consciousness: '清醒', edema: '轻度', intake: '正常', excretion: '正常', pain: '无', sleep: '良好', recorder: '护工小张', remark: '正常' }
     ]
   },
   {
@@ -819,8 +819,8 @@ let residents = [
     chronic: '无', allergy: '无', diet: '无特殊要求', selfCare: '完全自理',
     phone: '13800001003', emergencyContact: '王女士', emergencyPhone: '13900001003',
     healthRecords: [
-      { time: '2026-04-26 07:30', heartRate: '82', bloodPressure: '140/90', bloodSugar: '6.2', oxygen: '96', recorder: '护工小陈', remark: '血压偏高，已通知医生' },
-      { time: '2026-04-25 07:30', heartRate: '80', bloodPressure: '138/88', bloodSugar: '6.0', oxygen: '97', recorder: '护工小陈', remark: '正常' }
+      { time: '2026-04-26 07:30', temperature: '36.5', bloodPressure: '140/90', heartRate: '82', respiration: '20', oxygen: '96', bloodSugar: '6.2', consciousness: '清醒', edema: '无', intake: '正常', excretion: '正常', pain: '无', sleep: '良好', recorder: '护工小陈', remark: '血压偏高，已通知医生' },
+      { time: '2026-04-25 07:30', temperature: '36.4', bloodPressure: '138/88', heartRate: '80', respiration: '19', oxygen: '97', bloodSugar: '6.0', consciousness: '清醒', edema: '无', intake: '正常', excretion: '正常', pain: '无', sleep: '良好', recorder: '护工小陈', remark: '正常' }
     ]
   },
   {
@@ -829,9 +829,9 @@ let residents = [
     chronic: '糖尿病、高血压', allergy: '海鲜过敏', diet: '低糖低盐饮食', selfCare: '需协助',
     phone: '13800001004', emergencyContact: '赵先生', emergencyPhone: '13900001004',
     healthRecords: [
-      { time: '2026-04-26 07:30', heartRate: '85', bloodPressure: '145/92', bloodSugar: '8.5', oxygen: '95', recorder: '护工小陈', remark: '空腹血糖偏高，已通知医生' },
-      { time: '2026-04-25 21:00', heartRate: '80', bloodPressure: '140/88', bloodSugar: '9.2', oxygen: '96', recorder: '护工小陈', remark: '晚间血糖偏高' },
-      { time: '2026-04-25 07:30', heartRate: '82', bloodPressure: '142/90', bloodSugar: '7.8', oxygen: '96', recorder: '护工小李', remark: '晨起测量' }
+      { time: '2026-04-26 07:30', temperature: '36.6', bloodPressure: '145/92', heartRate: '85', respiration: '21', oxygen: '95', bloodSugar: '8.5', consciousness: '清醒', edema: '无', intake: '少量', excretion: '正常', pain: '无', sleep: '一般', recorder: '护工小陈', remark: '空腹血糖偏高，已通知医生' },
+      { time: '2026-04-25 21:00', temperature: '36.5', bloodPressure: '140/88', heartRate: '80', respiration: '20', oxygen: '96', bloodSugar: '9.2', consciousness: '清醒', edema: '无', intake: '正常', excretion: '正常', pain: '无', sleep: '差', recorder: '护工小陈', remark: '晚间血糖偏高' },
+      { time: '2026-04-25 07:30', temperature: '36.5', bloodPressure: '142/90', heartRate: '82', respiration: '20', oxygen: '96', bloodSugar: '7.8', consciousness: '清醒', edema: '无', intake: '正常', excretion: '正常', pain: '无', sleep: '良好', recorder: '护工小李', remark: '晨起测量' }
     ]
   },
   {
@@ -840,8 +840,8 @@ let residents = [
     chronic: '心脏病', allergy: '无', diet: '低脂饮食', selfCare: '需协助',
     phone: '13800001005', emergencyContact: '孙先生', emergencyPhone: '13900001005',
     healthRecords: [
-      { time: '2026-04-26 08:00', heartRate: '68', bloodPressure: '125/78', bloodSugar: '5.4', oxygen: '97', recorder: '护工小王', remark: '心率正常' },
-      { time: '2026-04-25 08:00', heartRate: '65', bloodPressure: '120/75', bloodSugar: '5.2', oxygen: '98', recorder: '护工小王', remark: '正常' }
+      { time: '2026-04-26 08:00', temperature: '36.3', bloodPressure: '125/78', heartRate: '68', respiration: '17', oxygen: '97', bloodSugar: '5.4', consciousness: '清醒', edema: '无', intake: '正常', excretion: '正常', pain: '轻度', sleep: '一般', recorder: '护工小王', remark: '心率正常' },
+      { time: '2026-04-25 08:00', temperature: '36.2', bloodPressure: '120/75', heartRate: '65', respiration: '16', oxygen: '98', bloodSugar: '5.2', consciousness: '清醒', edema: '无', intake: '正常', excretion: '正常', pain: '无', sleep: '良好', recorder: '护工小王', remark: '正常' }
     ]
   },
   {
@@ -857,9 +857,9 @@ let residents = [
     chronic: '多种慢性病（高血压、糖尿病、关节炎）', allergy: '磺胺类药物过敏', diet: '低糖低盐低脂饮食', selfCare: '需协助',
     phone: '13800001007', emergencyContact: '吴女士', emergencyPhone: '13900001007',
     healthRecords: [
-      { time: '2026-04-26 09:00', heartRate: '88', bloodPressure: '150/95', bloodSugar: '8.8', oxygen: '94', recorder: '护工小陈', remark: '血压血糖均偏高，已通知医生' },
-      { time: '2026-04-25 09:00', heartRate: '85', bloodPressure: '148/92', bloodSugar: '8.5', oxygen: '95', recorder: '护工小陈', remark: '血压偏高' },
-      { time: '2026-04-24 09:00', heartRate: '90', bloodPressure: '152/98', bloodSugar: '9.0', oxygen: '93', recorder: '护工小李', remark: '多项指标偏高' }
+      { time: '2026-04-26 09:00', temperature: '36.7', bloodPressure: '150/95', heartRate: '88', respiration: '22', oxygen: '94', bloodSugar: '8.8', consciousness: '清醒', edema: '中度', intake: '少量', excretion: '便秘', pain: '中度', sleep: '差', recorder: '护工小陈', remark: '血压血糖均偏高，已通知医生' },
+      { time: '2026-04-25 09:00', temperature: '36.6', bloodPressure: '148/92', heartRate: '85', respiration: '21', oxygen: '95', bloodSugar: '8.5', consciousness: '清醒', edema: '中度', intake: '少量', excretion: '正常', pain: '轻度', sleep: '一般', recorder: '护工小陈', remark: '血压偏高' },
+      { time: '2026-04-24 09:00', temperature: '36.8', bloodPressure: '152/98', heartRate: '90', respiration: '23', oxygen: '93', bloodSugar: '9.0', consciousness: '嗜睡', edema: '中度', intake: '困难', excretion: '便秘', pain: '中度', sleep: '差', recorder: '护工小李', remark: '多项指标偏高' }
     ]
   },
   {
@@ -1712,28 +1712,44 @@ function renderDetailHealthRecord(r) {
   } else {
     html += `
       <div style="overflow-x:auto;">
-        <table style="width:100%; border-collapse:collapse; font-size:13px;">
+        <table style="min-width:1600px; border-collapse:collapse; font-size:12px;">
           <thead style="background:#fafafa;">
             <tr>
-              <th style="padding:12px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">记录时间</th>
-              <th style="padding:12px; text-align:left; border-bottom:1px solid #f0f0f0;">心率(bpm)</th>
-              <th style="padding:12px; text-align:left; border-bottom:1px solid #f0f0f0;">血压(mmHg)</th>
-              <th style="padding:12px; text-align:left; border-bottom:1px solid #f0f0f0;">血糖(mmol/L)</th>
-              <th style="padding:12px; text-align:left; border-bottom:1px solid #f0f0f0;">血氧(%)</th>
-              <th style="padding:12px; text-align:left; border-bottom:1px solid #f0f0f0;">记录人</th>
-              <th style="padding:12px; text-align:left; border-bottom:1px solid #f0f0f0;">备注</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">记录时间</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">体温(°C)</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">血压(mmHg)</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">心率(bpm)</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">呼吸(次/分)</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">血氧(%)</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">血糖(mmol/L)</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">意识</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">水肿</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">进食</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">大小便</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">疼痛</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">睡眠</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">记录人</th>
+              <th style="padding:10px 8px; text-align:left; border-bottom:1px solid #f0f0f0; white-space:nowrap;">备注</th>
             </tr>
           </thead>
           <tbody>
             ${records.map(rec => `
               <tr>
-                <td style="padding:12px; border-bottom:1px solid #f0f0f0; white-space:nowrap;">${rec.time}</td>
-                <td style="padding:12px; border-bottom:1px solid #f0f0f0;">${rec.heartRate || '--'}</td>
-                <td style="padding:12px; border-bottom:1px solid #f0f0f0;">${rec.bloodPressure || '--'}</td>
-                <td style="padding:12px; border-bottom:1px solid #f0f0f0;">${rec.bloodSugar || '--'}</td>
-                <td style="padding:12px; border-bottom:1px solid #f0f0f0;">${rec.oxygen || '--'}</td>
-                <td style="padding:12px; border-bottom:1px solid #f0f0f0;">${rec.recorder || '--'}</td>
-                <td style="padding:12px; border-bottom:1px solid #f0f0f0; color:rgba(0,0,0,0.65);">${rec.remark || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0; white-space:nowrap;">${rec.time}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.temperature || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.bloodPressure || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.heartRate || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.respiration || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.oxygen || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.bloodSugar || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.consciousness || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.edema || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.intake || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.excretion || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.pain || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.sleep || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;">${rec.recorder || '--'}</td>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0; color:rgba(0,0,0,0.65);">${rec.remark || '--'}</td>
               </tr>
             `).join('')}
           </tbody>
@@ -1752,13 +1768,21 @@ function exportHealthRecords(residentId) {
     return;
   }
 
-  const headers = ['记录时间', '心率(bpm)', '血压(mmHg)', '血糖(mmol/L)', '血氧(%)', '记录人', '备注'];
+  const headers = ['记录时间', '体温(°C)', '血压(mmHg)', '心率(bpm)', '呼吸(次/分)', '血氧(%)', '血糖(mmol/L)', '意识', '水肿', '进食', '大小便', '疼痛', '睡眠', '记录人', '备注'];
   const rows = r.healthRecords.map(rec => [
     rec.time || '',
-    rec.heartRate || '',
+    rec.temperature || '',
     rec.bloodPressure || '',
-    rec.bloodSugar || '',
+    rec.heartRate || '',
+    rec.respiration || '',
     rec.oxygen || '',
+    rec.bloodSugar || '',
+    rec.consciousness || '',
+    rec.edema || '',
+    rec.intake || '',
+    rec.excretion || '',
+    rec.pain || '',
+    rec.sleep || '',
     rec.recorder || '',
     rec.remark || ''
   ]);
